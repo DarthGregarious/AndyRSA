@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndyRSA", "AndyRSA\AndyRSA.csproj", "{CA90E202-BE43-48CB-BDD1-B954F3A6893C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndyRSA.Core", "AndyRSA.Core\AndyRSA.Core.csproj", "{F25C7DDA-1B8A-458B-8680-B9E091E41893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AndyRSA.Tests", "AndyRSA.Tests\AndyRSA.Tests.csproj", "{CD27D650-65F5-4819-99A2-058E0D63E014}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA90E202-BE43-48CB-BDD1-B954F3A6893C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA90E202-BE43-48CB-BDD1-B954F3A6893C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA90E202-BE43-48CB-BDD1-B954F3A6893C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA90E202-BE43-48CB-BDD1-B954F3A6893C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25C7DDA-1B8A-458B-8680-B9E091E41893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25C7DDA-1B8A-458B-8680-B9E091E41893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25C7DDA-1B8A-458B-8680-B9E091E41893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25C7DDA-1B8A-458B-8680-B9E091E41893}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD27D650-65F5-4819-99A2-058E0D63E014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD27D650-65F5-4819-99A2-058E0D63E014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD27D650-65F5-4819-99A2-058E0D63E014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD27D650-65F5-4819-99A2-058E0D63E014}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
