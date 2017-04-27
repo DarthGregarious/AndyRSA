@@ -1,0 +1,9 @@
+*.suo
+AndyRSA.Core/bin/*
+AndyRSA.Core/obj/*
+AndyRSA.Tests/bin/*
+AndyRSA.Tests/obj/*
+AndyRSA/bin/*
+AndyRSA/obj/*
+packages/*
+*.user
