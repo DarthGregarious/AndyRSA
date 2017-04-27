@@ -29,6 +29,13 @@ namespace AndyRSA.Tests
       new PrimeChecker().IsPrime(i).ShouldBe(false);
     }
 
+    [Test]
+    public void ReturnTrue_WhenNumberIsPrimeAndLarge()
+    {
+      //todoamk: implement Rabin-Miller test
+      throw new NotImplementedException();
+    }
+
     [TestCase(3u)]
     [TestCase(5u)]
     [TestCase(7u)]

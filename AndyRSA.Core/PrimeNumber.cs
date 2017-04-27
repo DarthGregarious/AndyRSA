@@ -31,7 +31,6 @@ namespace AndyRSA.Core
 
     private static bool IsPredictedToBePrimeByRabinMillerTest(uint i)
     {
-      //todoamk: implement Rabin-Miller test
       throw new NotImplementedException();
     }
 
