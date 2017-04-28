@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using System.Numerics;
+using System.Security.Cryptography;
 
 namespace AndyRSA.Core
 {
@@ -24,14 +26,60 @@ namespace AndyRSA.Core
       return (1 & i) != 0;
     }
 
+    protected static bool IsOdd(BigInteger i)
+    {
+      return (1 & i) != 0;
+    }
+
     private static bool IsInLowPrimeRange(uint i)
     {
       return i <= 1000;
     }
 
-    private static bool IsPredictedToBePrimeByRabinMillerTest(uint i)
+    private static bool IsPredictedToBePrimeByRabinMillerTest(BigInteger numToCheck)
     {
-      throw new NotImplementedException();
+      var s = numToCheck - 1;
+      var halfCount = 0;
+
+      while (!IsOdd(s))
+      {
+        s = s / 2;
+        halfCount = halfCount + 1;
+      }
+
+      var k = 0;
+
+      while (k < 128)
+      {
+        var a = numToCheck;
+
+        while(a >= numToCheck || a < 2) // is there a better way to implement a random range with big integers?
+        {
+          var aBytes = a.ToByteArray();
+          new RNGCryptoServiceProvider().GetBytes(aBytes);
+          a = new BigInteger(aBytes);
+        }
+
+        var v = BigInteger.ModPow(a, s, numToCheck);
+
+        if (v != 1)
+        {
+          var i = 0;
+          while (v != numToCheck - 1)
+          {
+            if (i == halfCount - 1)
+              return false;
+            else
+            {
+              i = i + 1;
+              v = (v ^ 2) % numToCheck;
+            }
+          }
+        }
+
+        k += 2;
+      }
+      return true;
     }
 
     private static bool IsLowPrime(uint i)
